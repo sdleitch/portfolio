@@ -2,6 +2,12 @@
 
 (function($) {
   $(document).ready(function() {
-    // Add your jQuery code here
+
+    $('#nav-toggle').on('click', function(eventObject) {
+      eventObject.preventDefault();
+      $(this).toggleClass('active');
+      $('#navbar').toggleClass('active');
+    });
+
   });
 })(jQuery);

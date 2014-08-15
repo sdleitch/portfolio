@@ -29,5 +29,69 @@
 ******************************************************************************/
 
 
+/*NAVIGATION BAR STYLES*/
+#nav-toggle {
+  position: absolute;
+  left: 0em;
+  bottom: .5em;
+  cursor: pointer;
+  padding: 30px 50px 30px 30px;
+}
 
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 50px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#nav-toggle span:before {
+  top: -15px;
+}
+
+#nav-toggle span:after {
+  bottom: -15px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+#navbar {
+  @include transition(top 0.25s $ease-in-sine);
+
+  position: fixed;
+  height: 10em;
+  width: 100%;
+  top: -6em;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+
+  &.active {
+    top: 0;
+  }
+}
 
