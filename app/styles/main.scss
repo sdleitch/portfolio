@@ -6,9 +6,11 @@
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
 
-
-
-
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
 
 /*****************************************************************************
   Base Styles
@@ -25,17 +27,19 @@ main {
     text-align: center;
 }
 
-/*#navbar ul {
-  text-align: center;
-  list-style: none;
-  padding-left: 0;
-}*/
-
 .intro {
+/*  max-width: 80%;*/
+  background-color: rgba(255, 255, 255, 0.5);
+  border: .2em solid;
   margin: 0 auto;
+  padding: 2em;
   width: 100%;
   position: absolute;
   top: 30%;
+
+  p {
+    text-align: left;
+  }
 }
 
 /*****************************************************************************
