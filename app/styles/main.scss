@@ -21,7 +21,6 @@
 }
 
 
-
 /*****************************************************************************
   Layout Styles
 ******************************************************************************/
@@ -50,7 +49,7 @@
   border-radius: 1px;
   height: 5px;
   width: 50px;
-  background: white;
+  background: black;
   position: absolute;
   display: block;
   content: '';
@@ -91,8 +90,9 @@
   height: 100%;
   width: 100%;
   top: -90%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  opacity: 0.6;
+  color: black;
   z-index: 1000;
 
   &.active {
