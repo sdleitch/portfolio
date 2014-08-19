@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "dependencies": {
+    "bourbon": "~3.2.1",
+    "neat": "~1.5.1", 
+    "jquery": "~1.11.0",
+    "normalize-css": "~3.0.1"
+  },
+  "devDependencies": {}
+}
+
