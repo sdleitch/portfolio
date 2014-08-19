@@ -51,6 +51,15 @@ main {
 
 
 /*NAVIGATION BAR STYLES*/
+#nav-container {
+  height: 4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
 #nav-toggle {
   position: absolute;
   right: 3em;
@@ -109,7 +118,7 @@ main {
   width: 100%;
   top: -100%;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.9;
   color: black;
   z-index: 900;
 
