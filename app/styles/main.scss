@@ -16,6 +16,7 @@ $yellow-tan: #B5BF74;
 
 /***FONT STYLES***/
 
+
 * {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -32,10 +33,27 @@ $yellow-tan: #B5BF74;
 
 body {
   background: url('../images/bg-home.jpg') no-repeat center center fixed;
+
+  p {
+    text-align: left;
+  }
+}
+
+main {
+  @include outer-container;
+}
+
+a {
+  text-decoration: none;
+  color: $blue-light;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .intro {
-/*  max-width: 80%;*/
+  /*  max-width: 80%;*/
   background-color: rgba(255, 255, 255, 0.5);
   border: .2em solid;
   margin: 0 auto;
@@ -44,9 +62,12 @@ body {
   position: absolute;
   top: 30%;
 
-  p {
-    text-align: left;
+/*  aside {
+    @include span-columns(4);
   }
+  article {
+    @include span-columns(8);
+  }*/
 }
 
 /*****************************************************************************
