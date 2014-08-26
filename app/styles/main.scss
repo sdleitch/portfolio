@@ -14,9 +14,6 @@ $blue-lighter: #CBF1F2;
 $green-dark: #004218;
 $yellow-tan: #B5BF74;
 
-/***FONT STYLES***/
-
-
 * {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -47,6 +44,7 @@ body, html {
   height: 100%;
 
   p {
+    font-family: $georgia;
     text-align: left;
   }
 }
@@ -78,6 +76,7 @@ a:hover {
   width: 100%;
   position: relative;
   top: 30%;
+  max-width: 900px;
 
   @media screen and (min-width: 500px){
     width: 80%;
