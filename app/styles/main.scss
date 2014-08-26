@@ -42,17 +42,22 @@ $yellow-tan: #B5BF74;
   }
 }
 
-body {
+body, html {
   background: url('../images/bg-home.jpg') no-repeat center center fixed;
+  height: 100%;
 
   p {
     text-align: left;
   }
 }
 
-.intro-container {
+main, #top-container {
+  min-height: 100vh;
+}
+
+.container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 a {
@@ -64,15 +69,19 @@ a:hover {
   text-decoration: underline;
 }
 
-.intro {
+.section-content {
   /*  max-width: 80%;*/
   background-color: rgba(255, 255, 255, 0.5);
   border: .2em solid;
   margin: 0 auto;
   padding: 2em;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 30%;
+
+  @media screen and (min-width: 500px){
+    width: 80%;
+  }
 }
 
 /*****************************************************************************
@@ -90,7 +99,7 @@ a:hover {
 /*NAVIGATION BAR STYLES*/
 #nav-container {
   height: 4em;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -158,12 +167,17 @@ a:hover {
   opacity: 0.9;
   color: black;
   z-index: 900;
+  overflow: scroll;
 
   ul {
     padding-top: 5em;
     text-align: center;
     list-style: none;
     padding-left: 0;
+
+    li {
+      margin-bottom: 3em
+    }
   }
 
   &.active {
