@@ -13,6 +13,5 @@
       eventObject.preventDefault();
       $('#navbar').removeClass('active');
     });
-
   });
 })(jQuery);
