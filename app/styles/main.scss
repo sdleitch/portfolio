@@ -2,7 +2,6 @@
   portfolio
 ******************************************************************************/
 
-
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
 
@@ -42,6 +41,7 @@ $yellow-tan: #B5BF74;
 body, html {
   background: url('../images/bg-home.jpg') no-repeat center center fixed;
   height: 100%;
+  overflow: hidden;
 
   p {
     font-family: $georgia;
@@ -67,37 +67,26 @@ a:hover {
   text-decoration: underline;
 }
 
-.section-content {
-  /*  max-width: 80%;*/
-  background-color: rgba(255, 255, 255, 0.5);
-  border: .2em solid;
-  margin: 0 auto;
-  padding: 2em;
-  width: 100%;
-  position: relative;
-  top: 30%;
-  max-width: 900px;
-
-  @media screen and (min-width: 500px){
-    width: 80%;
-  }
-}
-
-/*****************************************************************************
-  Layout Styles
-******************************************************************************/
-
 .contact-icon {
   padding: 1em;
   width: 6em;
 
 }
 
-
 /*****************************************************************************
-  Module Styles
+  Layout Styles
 ******************************************************************************/
 
+.section-content {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: .2em solid;
+  margin: 0 auto;
+  padding: 2em;
+  width: 100%;
+  position: relative;
+  top: 20%;
+  max-width: 900px;
+}
 
 /*NAVIGATION BAR STYLES*/
 #nav-container {
@@ -187,4 +176,78 @@ a:hover {
     top: 0;
   }
 }
+
+/*SKILLS STRETCH PANEL STYLES*/
+
+#skills {
+  @include transition(all 0.2s ease-in-out);
+
+  height: 200%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  top: 100vh;
+}
+
+.col {
+  @include transition(all 0.2s ease-in-out);
+
+  float: left;
+  display: inline-block;
+  width: 100%;
+  height: 12.5%;
+  border: solid black .2em;
+  opacity: 0.5;
+
+  &.active {
+    @include transition(all 0.2s ease-in-out);
+
+    height: 100vh;
+    opacity: 1;
+  }
+
+  &.col1 {
+    background-color: tomato;
+  }
+
+  &.col2 {
+    background-color: yellow;
+  }
+
+  &.col3 {
+    background-color: blue;
+  }
+
+  &.col4 {
+    background-color: pink;
+  }
+}
+
+@media screen and (min-width: 500px){
+  .section-content{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 800px){
+  #skills {
+    height: 100vh;
+    width: 200%;
+  }
+
+  .col {
+    width: 12.5%;
+    height: 100%;
+
+    &.active {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+}
+
+/*****************************************************************************
+  Module Styles
+******************************************************************************/
 
