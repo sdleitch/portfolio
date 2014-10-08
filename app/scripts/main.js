@@ -21,6 +21,7 @@
       }
       $('#nav-toggle').toggleClass('active');
       $('#navbar').toggleClass('active');
+
     });
 
     //Skills stretchbar code - stretch/shrink when clicked.
