@@ -10,9 +10,15 @@
       $('#navbar').toggleClass('active');
     });
 
-    //When navbar link clicked, untoggle 
+    //When navbar link clicked, untoggle and scroll
     $('.list-link').on('click', function(eventObject) {
       eventObject.preventDefault();
+      if ($(this).hasClass('intro')) {
+        $('html, body').animate({scrollTop: $('#intro').offset().top}, 1000);
+      }
+      if ($(this).hasClass('skills')) {
+        $('html, body').animate({scrollTop: $('#skills').offset().top}, 1000);
+      }
       $('#nav-toggle').toggleClass('active');
       $('#navbar').toggleClass('active');
     });
