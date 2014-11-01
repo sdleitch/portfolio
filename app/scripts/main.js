@@ -11,15 +11,22 @@
     };
 
     //toggle the hamburger button
-    var hamToggle = function() {
+    var navToggle = function() {
       $('#nav-toggle').toggleClass('active');
     };
 
     // Toggle navbar on hamburger button click
     $('#nav-toggle').on('click', function(eventObject) {
       eventObject.preventDefault();
-      hamToggle();
-      $('#navbar').toggleClass('active');
+      if ($('.col').hasClass('active')) {
+        $('.col').removeClass('active');
+        $('#skills').css('top', '100vh');
+        $('#skills').css('left', '0px');
+      }
+      else {
+        $('#navbar').toggleClass('active');
+      }
+      navToggle();
     });
 
     //When navbar link clicked, untoggle and scroll
@@ -31,7 +38,7 @@
       if ($(this).hasClass('skills')) {
         $('html, body').animate({scrollTop: $('#skills').offset().top}, 1000);
       }
-      hamToggle();
+      navToggle();
       $('#navbar').toggleClass('active');
       resetStretchBar();
 
@@ -69,20 +76,9 @@
           $('#skills').css('left', '-75%');
         }
       }
-
-      //if .col active, remove. If inactive, make active.
-      if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $('#skills').css('top', '100vh');
-        $('#skills').css('left', '0px');
-        // $('#nav-toggle').removeClass('active');
-      }
-      else {
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        // $('#nav-toggle').addClass('active');
-      }
-      hamToggle();
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      navToggle();
     });
   });
 })(jQuery);
