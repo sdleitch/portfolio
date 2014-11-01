@@ -3,10 +3,22 @@
 (function($) {
   $(document).ready(function() {
 
+    //reset stretchbar
+    var resetStretchBar = function() {
+      $('.col').removeClass('active');
+      $('#skills').css('top', '100vh');
+      $('#skills').css('left', '0px');
+    };
+
+    //toggle the hamburger button
+    var hamToggle = function() {
+      $('#nav-toggle').toggleClass('active');
+    };
+
     // Toggle navbar on hamburger button click
     $('#nav-toggle').on('click', function(eventObject) {
       eventObject.preventDefault();
-      $(this).toggleClass('active');
+      hamToggle();
       $('#navbar').toggleClass('active');
     });
 
@@ -19,8 +31,9 @@
       if ($(this).hasClass('skills')) {
         $('html, body').animate({scrollTop: $('#skills').offset().top}, 1000);
       }
-      $('#nav-toggle').toggleClass('active');
+      hamToggle();
       $('#navbar').toggleClass('active');
+      resetStretchBar();
 
     });
 
@@ -69,6 +82,7 @@
         $(this).addClass('active');
         // $('#nav-toggle').addClass('active');
       }
+      hamToggle();
     });
   });
 })(jQuery);

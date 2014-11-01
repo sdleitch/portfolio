@@ -70,7 +70,6 @@ a:hover {
 .contact-icon {
   padding: 1em;
   width: 6em;
-
 }
 
 /*****************************************************************************
@@ -149,7 +148,7 @@ a:hover {
 }
 
 #navbar {
-  @include transition(top 0.25s $ease-in-sine);
+  @include transition(top 0.15s $ease-in-sine);
 
   position: fixed;
   height: 100%;
@@ -180,7 +179,7 @@ a:hover {
 /*SKILLS STRETCH PANEL STYLES*/
 
 #skills {
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.1s ease-in-out);
 
   height: 200%;
   width: 100%;
@@ -191,7 +190,7 @@ a:hover {
 }
 
 .col {
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.1s ease-in-out);
 
   float: left;
   display: inline-block;
@@ -201,7 +200,7 @@ a:hover {
   opacity: 0.5;
 
   &.active {
-    @include transition(all 0.2s ease-in-out);
+    @include transition(all 0.1s ease-in-out);
 
     height: 100vh;
     opacity: 1;
@@ -244,6 +243,11 @@ a:hover {
       width: 50%;
       opacity: 1;
     }
+  }
+
+  .contact-icon {
+  padding: 1em;
+  width: 8em;
   }
 }
 
