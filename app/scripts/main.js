@@ -15,16 +15,19 @@
       $('#nav-toggle').toggleClass('active');
     };
 
+    //toggle show/hide navbar
+    var navbarToggle = function() {
+      $('#navbar').toggleClass('active');
+    };
+    
     // Toggle navbar on hamburger button click
     $('#nav-toggle').on('click', function(eventObject) {
       eventObject.preventDefault();
       if ($('.col').hasClass('active')) {
-        $('.col').removeClass('active');
-        $('#skills').css('top', '100vh');
-        $('#skills').css('left', '0px');
+        resetStretchBar();
       }
       else {
-        $('#navbar').toggleClass('active');
+        navbarToggle();
       }
       navToggle();
     });
@@ -39,7 +42,7 @@
         $('html, body').animate({scrollTop: $('#skills').offset().top}, 1000);
       }
       navToggle();
-      $('#navbar').toggleClass('active');
+      navbarToggle();
       resetStretchBar();
 
     });
